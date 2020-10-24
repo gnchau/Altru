@@ -7,34 +7,29 @@ var role = "giver";
 export default function RoleSelection() {
   return (
     <View style = {styles.container}>
-    <Text style = {styles.titleText}>
-      Are you:
-    </Text>
-    <View style = {styles.container}>
-      <Button
-        onClick = {() => {
-          role = "giver"
-          }}
-        type = "button"
-        buttonStyle = "btn--primary--solid"
-        buttonSize="btn--medium"
-      >
-      Donating?
-      </Button>
-      <p>
-      {"\n\n\n\n\n\n\n\n\n\n"}
-      </p>
-      <Button
-        onClick = {() => {
-            role = "taker"
-          }}
-        type = "button"
-        buttonStyle = "btn--primary--solid"
-        buttonSize="btn--medium"
-      >
-      In Need?
-      </Button>
-    </View>
+      <Text style = {styles.titleText}>
+        Are you:
+      </Text>
+      <View style = {styles.container}>
+        <Button
+          title="Donating?"
+          onClick = {() => {
+            role = "giver"
+            }}
+          type = "button"
+          buttonStyle = "btn--primary--solid"
+          buttonSize="btn--medium"
+        />
+        <Button
+          title="In need?"
+          onClick = {() => {
+              role = "taker"
+            }}
+          type = "button"
+          buttonStyle = "btn--primary--solid"
+          buttonSize="btn--medium"
+        />
+      </View>
     </View>
   );
 }
@@ -45,7 +40,8 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'space-around',
+    flexDirection: 'column'
   },
 
   content: {
