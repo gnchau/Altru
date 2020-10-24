@@ -3,7 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import {createAppContainer, createSwitchNavigator} from 'react-navigation';
 import LoginScreen from './screens/LoginScreen'
-import DashboardScreen from "./screens/DashboardScreen"
+import RoleSelection from "./screens/RoleSelection"
 import LoadingScreen from "./screens/LoadingScreen"
 
 import firebase from 'firebase'
@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
 const AppSwitchNavigator = createSwitchNavigator({
   LoadingScreen : LoadingScreen,
   LoginScreen:LoginScreen,
-  DashboardScreen:DashboardScreen,
+  RoleSelection:RoleSelection,
 
 })
 
